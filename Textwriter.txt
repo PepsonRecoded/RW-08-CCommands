@@ -1,0 +1,8 @@
+if %cli-input% == txtwrite goto textwrite
+:textwrite
+mkdir \RW-08\Appdata\txtwriter\
+echo Welcome to RW-08 Text Writer Version 1.0
+set /p textname="Name:"
+set /p textfile="Content:"
+echo %textfile% >>\RW-08\Appdata\txtwriter\%textname%.txt
+goto cli
